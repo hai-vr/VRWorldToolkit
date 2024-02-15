@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿#if VRC_SDK_VRCSDK2 || VRC_SDK_VRCSDK3
+#if UNITY_POST_PROCESSING_STACK_V2
+using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -167,3 +169,5 @@ namespace VRWorldToolkit.Editor
         }
     }
 }
+#endif
+#endif
